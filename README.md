@@ -697,6 +697,7 @@ app.listen(process.env.PORT || port, () => {
 ```
 
 ## Modificando o lock migration para postgresql
+
 No settings do railway no nosso projeto
 
 - Start Command
@@ -705,14 +706,18 @@ No settings do railway no nosso projeto
 > Colocamos
 
 npx prisma migrate deploy && npm run start
-modificamos o 
+modificamos o
 migration_lock.toml
 
 npx prisma migrate dev
 
-## Alterando o DATABASE_URL para 
+## Alterando o DATABASE_URL para
 
 ```tsx
-DATABASE_URL="postgresql://postgres:*****@containers-us-west-46.railway.app:7922/railway"
+DATABASE_URL =
+  "postgresql://postgres:*****@containers-us-west-46.railway.app:7922/railway";
 ```
- a parte de ** e confidencial
+
+a parte de \*\* e confidencial
+
+#MissionAccomplished
