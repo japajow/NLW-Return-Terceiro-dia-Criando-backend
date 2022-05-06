@@ -1,3 +1,10 @@
 {
-  "cSpell.words": ["Feedget", "Hamawaki", "insominia", "mailtrap"]
+  "cSpell.words": [
+    "datasource",
+    "Feedget",
+    "Hamawaki",
+    "insominia",
+    "mailtrap",
+    "postgresql"
+  ]
 }

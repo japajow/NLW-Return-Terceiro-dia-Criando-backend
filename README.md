@@ -635,5 +635,49 @@ app.use(
   })
 );
 ```
-Código de hoje 
-#NewSkills 
+
+Código de hoje
+#NewSkills
+
+## Modificando algumas coisas para fazer deploy
+
+No arquivo schema.prisma
+Estamos setando sempre para sqlite > postgresql
+
+nao usar o sqlite como produção, corre menos risco para nao parar de funcionar quando for para produção
+
+```tsx
+
+ datasource db {
+ provider = "sqlite"
+ url      = env("DATABASE_URL")
+}
+
+ datasource db {
+ provider = "postgresql"
+ url      = env("DATABASE_URL")
+}
+
+
+```
+
+No .gitignore adicionamos a pasta dist para nao ir a produção
+
+```tsx
+dist;
+```
+
+No Arquivo tsconfig.json incluímos
+
+```tsx
+,
+  "include": ["src"]
+```
+Agora damos um npx tsc 
+
+
+Outra coisa e ir no package.json e incluir no scripts 
+"build": "npx tsc" 
+"start": "node dist/server.js"
+
+No arquivo .env vamos mudar para postgresql
