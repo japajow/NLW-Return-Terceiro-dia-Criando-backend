@@ -673,11 +673,24 @@ No Arquivo tsconfig.json incluímos
 ,
   "include": ["src"]
 ```
-Agora damos um npx tsc 
 
+Agora damos um npx tsc
 
-Outra coisa e ir no package.json e incluir no scripts 
-"build": "npx tsc" 
+Outra coisa e ir no package.json e incluir no scripts
+"build": "npx tsc"
 "start": "node dist/server.js"
 
 No arquivo .env vamos mudar para postgresql
+
+Vamos no railway
+https://railway.app/
+
+## Modificando a porta do server
+No server.ts modificamos a porta para o railway decidir automaticamente
+
+```tsx
+const port = 3333;
+app.listen(process.env.PORT || port, () => {
+  console.log("Http server running" + port);
+});
+```

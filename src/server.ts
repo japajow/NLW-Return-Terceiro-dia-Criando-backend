@@ -9,6 +9,6 @@ app.use(express.json());
 app.use(routes);
 
 const port = 3333;
-app.listen(port, () => {
+app.listen(process.env.PORT || port, () => {
   console.log("Http server running" + port);
 });
