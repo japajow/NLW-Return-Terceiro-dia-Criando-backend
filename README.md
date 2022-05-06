@@ -686,6 +686,7 @@ Vamos no railway
 https://railway.app/
 
 ## Modificando a porta do server
+
 No server.ts modificamos a porta para o railway decidir automaticamente
 
 ```tsx
@@ -694,3 +695,17 @@ app.listen(process.env.PORT || port, () => {
   console.log("Http server running" + port);
 });
 ```
+
+## Modificando o lock migration para postgresql
+No settings do railway no nosso projeto
+
+- Start Command
+  Command that will be run to start new deployments.
+
+> Colocamos
+
+npx prisma migrate deploy && npm run start
+modificamos o 
+migration_lock.toml
+
+npx prisma migrate dev
