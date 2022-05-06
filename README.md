@@ -709,3 +709,10 @@ modificamos o
 migration_lock.toml
 
 npx prisma migrate dev
+
+## Alterando o DATABASE_URL para 
+
+```tsx
+DATABASE_URL="postgresql://postgres:*****@containers-us-west-46.railway.app:7922/railway"
+```
+ a parte de ** e confidencial
